@@ -17,15 +17,27 @@ export default function Skills() {
                     Technical <span className="text-accent">Skills</span>
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    {portfolioData.skills.map((skill, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {portfolioData.skills.map((cat, index) => (
                         <motion.div
                             key={index}
-                            whileHover={{ y: -5, scale: 1.05 }}
-                            className="flex items-center gap-3 p-4 bg-primary/80 border border-accent/20 rounded-lg shadow-sm hover:shadow-[0_0_15px_#0ef/30] transition-all"
+                            whileHover={{ y: -5 }}
+                            className="p-8 bg-primary/40 border border-accent/20 rounded-2xl shadow-lg hover:shadow-[0_0_20px_rgba(0,238,255,0.15)] transition-all"
                         >
-                            <CheckCircle2 className="text-accent" size={20} />
-                            <span className="font-medium">{skill}</span>
+                            <h3 className="text-xl font-bold mb-4 text-accent border-b border-accent/10 pb-2">
+                                {cat.category}
+                            </h3>
+                            <div className="flex flex-wrap gap-3">
+                                {cat.items.map((skill, sIdx) => (
+                                    <div
+                                        key={sIdx}
+                                        className="flex items-center gap-2 px-3 py-1.5 bg-primary/80 border border-accent/10 rounded-lg"
+                                    >
+                                        <CheckCircle2 className="text-accent" size={16} />
+                                        <span className="font-medium text-sm text-gray-200">{skill}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </motion.div>
                     ))}
                 </div>

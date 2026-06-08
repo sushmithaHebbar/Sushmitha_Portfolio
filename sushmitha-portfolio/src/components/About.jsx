@@ -17,17 +17,9 @@ export default function About() {
                 </h2>
 
                 <div className="space-y-6 text-lg leading-relaxed text-gray-300 text-justify">
-                    <p>{portfolioData.description}</p>
-                    <p>
-                        Hello! I'm Sushmitha, an enthusiastic and dedicated student pursuing a degree in AIML engineering. My
-                        journey has ignited a profound passion for artificial intelligence and machine learning. I find joy in
-                        unraveling the complexities of these fields and applying their principles to solve real-world problems.
-                    </p>
-                    <p>
-                        In addition to my technical pursuits, I am a passionate web developer. I enjoy crafting elegant and
-                        functional websites, combining creativity with technical expertise. Beyond academia and coding, I am an
-                        explorer at heart, committed to lifelong learning and making meaningful contributions to the field of AI.
-                    </p>
+                    {portfolioData.description.map((para, index) => (
+                        <p key={index}>{para}</p>
+                    ))}
                 </div>
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">

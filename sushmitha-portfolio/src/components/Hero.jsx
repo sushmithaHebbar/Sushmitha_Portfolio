@@ -39,7 +39,7 @@ export default function Hero() {
                 </div>
 
                 <a
-                    href="/White Simple Student CV Resume.pdf"
+                    href="/Resume_Sushmitha.pdf"
                     download
                     className="btn-primary"
                 >

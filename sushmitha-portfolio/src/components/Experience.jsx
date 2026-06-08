@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { Briefcase } from "lucide-react";
 
 export default function Experience() {
     return (
@@ -31,9 +30,18 @@ export default function Experience() {
                                         {exp.duration}
                                     </span>
                                 </div>
-                                <p className="text-gray-400 leading-relaxed text-lg italic">
+                                <p className="text-gray-400 leading-relaxed text-lg italic mb-4">
                                     {exp.description}
                                 </p>
+                                {exp.tech && exp.tech.length > 0 && (
+                                    <div className="flex flex-wrap gap-2 mt-4">
+                                        {exp.tech.map((t, i) => (
+                                            <span key={i} className="text-xs font-bold text-accent/80 uppercase tracking-wider bg-accent/10 px-2.5 py-1 rounded-md border border-accent/20">
+                                                {t}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}

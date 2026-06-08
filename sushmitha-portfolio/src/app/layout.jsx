@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -8,16 +7,12 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Sushmitha | Portfolio",
   description: "Web Developer | Explorer | Lifelong Learner",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import Image from "next/image";
 import { Image as ImageIcon } from "lucide-react";
 
 export default function Drawings() {

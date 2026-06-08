@@ -27,12 +27,16 @@ export default function Projects() {
                             <div className="flex justify-between items-center mb-6">
                                 <Folder className="text-accent" size={40} />
                                 <div className="flex gap-4">
-                                    <a href="#" className="text-gray-400 hover:text-accent transition-colors">
-                                        <Github size={22} />
-                                    </a>
-                                    <a href={project.link} className="text-gray-400 hover:text-accent transition-colors">
-                                        <ExternalLink size={22} />
-                                    </a>
+                                    {project.github && (
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                                            <Github size={22} />
+                                        </a>
+                                    )}
+                                    {project.link && project.link !== "#" && project.link !== project.github && (
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                                            <ExternalLink size={22} />
+                                        </a>
+                                    )}
                                 </div>
                             </div>
 
