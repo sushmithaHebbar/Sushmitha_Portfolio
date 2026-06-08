@@ -11,13 +11,13 @@ export default function Skills() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1 }}
-                className="max-w-4xl mx-auto"
+                className="max-w-6xl mx-auto"
             >
                 <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
                     Technical <span className="text-accent">Skills</span>
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {portfolioData.skills.map((cat, index) => (
                         <motion.div
                             key={index}
