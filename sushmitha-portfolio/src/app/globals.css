@@ -29,6 +29,14 @@ body {
   @apply inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-accent rounded-full text-xl text-accent mr-4 transition-all duration-300 hover:bg-accent hover:text-primary hover:shadow-[0_0_20px_#0ef];
 }
 
+.animate-slideTop {
+  animation: slideTop 0.5s ease forwards;
+}
+
+.animate-floatImage {
+  animation: floatImage 4s ease-in-out infinite;
+}
+
 /* Animations */
 @keyframes slideRight {
   0% {

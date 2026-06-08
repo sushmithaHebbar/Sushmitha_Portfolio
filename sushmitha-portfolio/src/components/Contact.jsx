@@ -6,7 +6,7 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-24 px-[10%] bg-primary/50">
+        <section id="contact" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary/50">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -28,32 +28,32 @@ export default function Contact() {
 
                         <div className="space-y-6">
                             <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                                     <Mail size={24} className="text-accent group-hover:text-primary" />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">Email</p>
-                                    <p className="text-xl font-bold hover:text-accent transition-colors">{portfolioData.contact.email}</p>
+                                    <p className="text-base sm:text-xl font-bold hover:text-accent transition-colors break-all">{portfolioData.contact.email}</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                                     <Phone size={24} className="text-accent group-hover:text-primary" />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">Phone</p>
-                                    <p className="text-xl font-bold hover:text-accent transition-colors">{portfolioData.contact.phone}</p>
+                                    <p className="text-base sm:text-xl font-bold hover:text-accent transition-colors break-all">{portfolioData.contact.phone}</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center gap-6 group">
-                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all duration-300">
+                                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-300">
                                     <MapPin size={24} className="text-accent group-hover:text-primary" />
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">Location</p>
-                                    <p className="text-xl font-bold leading-tight">{portfolioData.contact.address}</p>
+                                    <p className="text-base sm:text-xl font-bold leading-tight break-words">{portfolioData.contact.address}</p>
                                 </div>
                             </div>
                         </div>

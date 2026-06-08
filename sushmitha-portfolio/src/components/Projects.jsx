@@ -6,7 +6,7 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 
 export default function Projects() {
     return (
-        <section id="projects" className="py-24 px-[10%] bg-primary">
+        <section id="projects" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary">
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}

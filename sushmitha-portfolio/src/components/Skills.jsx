@@ -6,7 +6,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function Skills() {
     return (
-        <section id="skills" className="py-24 px-[10%] bg-primary">
+        <section id="skills" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary">
             <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -48,14 +48,25 @@ export default function Skills() {
                         Other Passions
                     </h3>
                     <div className="flex flex-wrap gap-4">
-                        {portfolioData.hobbies.map((hobby, index) => (
-                            <span
-                                key={index}
-                                className="px-6 py-2 bg-accent/10 text-accent border border-accent/30 rounded-full font-medium"
-                            >
-                                {hobby}
-                            </span>
-                        ))}
+                        {portfolioData.hobbies.map((hobby, index) => {
+                            const isDrawing = hobby.toLowerCase() === "drawing";
+                            return isDrawing ? (
+                                <a
+                                    key={index}
+                                    href="#drawings"
+                                    className="px-6 py-2 bg-accent/10 text-accent border border-accent/30 rounded-full font-medium hover:bg-accent/20 transition-all hover:scale-105 cursor-pointer"
+                                >
+                                    {hobby}
+                                </a>
+                            ) : (
+                                <span
+                                    key={index}
+                                    className="px-6 py-2 bg-accent/10 text-accent border border-accent/30 rounded-full font-medium"
+                                >
+                                    {hobby}
+                                </span>
+                            );
+                        })}
                     </div>
                 </div>
             </motion.div>

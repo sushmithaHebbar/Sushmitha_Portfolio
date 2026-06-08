@@ -6,7 +6,7 @@ import { Image as ImageIcon } from "lucide-react";
 
 export default function Drawings() {
     return (
-        <section id="drawings" className="py-24 px-[10%] bg-primary">
+        <section id="drawings" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary">
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}

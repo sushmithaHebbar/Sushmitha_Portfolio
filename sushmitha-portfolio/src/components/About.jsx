@@ -5,7 +5,7 @@ import { portfolioData } from "@/data/portfolio";
 
 export default function About() {
     return (
-        <section id="about" className="py-24 px-[10%] bg-primary/50">
+        <section id="about" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary/50">
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}

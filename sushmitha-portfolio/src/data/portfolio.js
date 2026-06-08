@@ -99,9 +99,70 @@ export const portfolioData = {
   ],
   certificates: [
     {
-      title: "NPTEL / Coursera / etc.",
-      issuer: "Issuer Name",
-      date: "Year",
+      title: "AI Using Python",
+      issuer: "NPTEL / Online Certification",
+      date: "July 2024",
+      link: "https://drive.google.com/file/d/1b1Mf8T3RWM2bxjx-Lsum2-xSlN4ipEJP/view?usp=sharing"
+    },
+    {
+      title: "Generative AI 101 with Pieces",
+      issuer: "Pieces for Developers",
+      date: "November 2024",
+      link: "https://drive.google.com/file/d/1VMv9TzFDtdFL4Mpsag_nSkz81VO5HDqF/view?usp=sharing"
+    },
+    {
+      title: "NVIDIA Jetson Nano Workshop",
+      issuer: "NVIDIA / College Workshop",
+      date: "February 2024",
+      link: "https://drive.google.com/file/d/1cXHFdiOwR-U7lVjBIbLeXQRdumMssPjV/view?usp=sharing"
+    },
+    {
+      title: "The Joy of Computing using Python",
+      issuer: "NPTEL / SWAYAM",
+      date: "November 2024",
+      link: "https://drive.google.com/file/d/1R-g91VXzuOYcs8JTrRSC2CoE0FcXP4VY/view?usp=sharing"
+    },
+    {
+      title: "Web Development Certification (WEBDIV)",
+      issuer: "College Training / WEBDIV",
+      date: "July 2023",
+      link: "https://drive.google.com/file/d/17RFD7Pa6voh74iSBgckLFvmjzL16NQe7/view?usp=sharing"
+    },
+    {
+      title: "TechVision 2025 Recognition",
+      issuer: "TechVision Event",
+      date: "December 2025",
+      link: "https://drive.google.com/file/d/1oL3Y1aoF5ErBVp5OKwSib2NuLpu_VhXV/view?usp=sharing"
+    },
+    {
+      title: "IIC Regional Meet 2025",
+      issuer: "Institution's Innovation Council (IIC)",
+      date: "December 2025",
+      link: "https://drive.google.com/file/d/1BWdn3jK4vfzSFonCbZvo6hGzUTAmz3_y/view?usp=sharing"
+    },
+    {
+      title: "Student Council Appreciation",
+      issuer: "Sahyadri College Student Council",
+      date: "February 2024",
+      link: "https://drive.google.com/file/d/1cbowQXj6rFYkViL42FchROX2hf1e8vOm/view?usp=sharing"
+    },
+    {
+      title: "My Bharat Volunteering Recognition",
+      issuer: "Ministry of Youth Affairs & Sports",
+      date: "February 2024",
+      link: "https://drive.google.com/file/d/1cTxshR17RyEQ-h6hVmjJEhYCDlJHRsfP/view?usp=sharing"
+    },
+    {
+      title: "Plasma Event Participation",
+      issuer: "Plasma Committee",
+      date: "January 2024",
+      link: "https://drive.google.com/file/d/15ajv4jhnR07TJJ6vGbebJQ_vqWha-fkZ/view?usp=sharing"
+    },
+    {
+      title: "Online Course Certification",
+      issuer: "Course Platform",
+      date: "March 2024",
+      link: "https://drive.google.com/file/d/1lg9erwXHccLyE2tekbQn5PWJBkUlAmoE/view?usp=sharing"
     }
   ],
   drawings: [
