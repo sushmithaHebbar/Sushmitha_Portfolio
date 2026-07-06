@@ -81,10 +81,10 @@ export const portfolioData = {
     {
       title: "Real-time Interaction ChatBot",
       description: "Developed an AI-powered Full-Stack Chatbot integrating machine learning-based intent recognition and Large Language Models (LLMs) for human-like conversations, using a Flask backend and responsive frontend with HTML, CSS and JavaScript for seamless user interaction.",
-      tech: ["Flask", "HTML", "CSS", "JavaScript", "Large Language Models (LLMs)", "Full-Stack Development"],
+      tech: ["Flask", "HTML", "CSS", "JavaScript", "Large Language Models (LLMs)", "Full-Stack Development","Python"],
       github: "https://github.com/sushmithaHebbar",
       gitlink: "https://github.com/sushmithaHebbar",
-      link:"",
+      link:"https://chatbot-ruby-gamma-91.vercel.app/",
       image: "/chatbot.png",
       category: "AI & Chat Systems"
     },
@@ -93,7 +93,7 @@ export const portfolioData = {
       description: "Developed a real-time AI-powered speech-to-speech translation system by integrating Speech Recognition, Machine Translation and Text-to-Speech into a scalable Python backend with CLI and web-based multilingual communication support.",
       tech: ["Python", "SpeechRecognition API", "Google Translate API", "gTTS", "Flask"],
       github: "https://github.com/sushmithaHebbar",
-      link: "https://github.com/sushmithaHebbar",
+      link: "https://voicetranslation-6h0kqwf5m-sushmithas-projects-53c50385.vercel.app/",
       image: "/translator.png",
       category: "Speech AI"
     },
@@ -141,8 +141,32 @@ export const portfolioData = {
   ],
   drawings: [
     {
-      title: "Drawing 1",
-      url: "/drawing1.png",
+      title: "Sketch 1",
+      url: "/drawing/sketch_2.jpeg",
+    },
+    {
+      title: "Sketch 2",
+      url: "/drawing/sketch_3.jpeg",
+    },
+    {
+      title: "Sketch 3",
+      url: "/drawing/sketch_4.jpeg",
+    },
+    {
+      title: "Sketch 4",
+      url: "/drawing/sketch_5.jpeg",
+    },
+    {
+      title: "Sketch 5",
+      url: "/drawing/sketch_6.jpeg",
+    },
+    {
+      title: "Sketch 6",
+      url: "/drawing/sketch_7.jpeg",
+    },
+    {
+      title: "Sketch 7",
+      url: "/drawing/sketch_8.jpeg",
     }
   ],
   contact: {

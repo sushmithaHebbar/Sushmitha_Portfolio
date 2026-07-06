@@ -1,11 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Github, Code } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 import Image from "next/image";
 
 export default function Projects() {
+    const [expanded, setExpanded] = useState({});
+
+    const toggleExpand = (index) => {
+        setExpanded((prev) => ({
+            ...prev,
+            [index]: !prev[index],
+        }));
+    };
+
     return (
         <section id="projects" className="py-20 px-6 md:py-28 md:px-[10%] bg-slate-50/50 relative">
             <div className="max-w-7xl mx-auto">
@@ -72,43 +82,58 @@ export default function Projects() {
 
                             {/* Card Content Footer block */}
                             <div className="p-6 flex-1 flex flex-col justify-between">
-                                <div className="flex justify-between items-start gap-4">
-                                    <div className="space-y-1">
-                                        {/* Category */}
-                                        <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
-                                            {project.category}
-                                        </span>
-                                        {/* Title */}
-                                        <h3 className="text-lg md:text-xl font-extrabold text-slate-800 leading-snug group-hover:text-primary transition-colors duration-300">
-                                            {project.title}
-                                        </h3>
+                                <div>
+                                    <div className="flex justify-between items-start gap-4">
+                                        <div className="space-y-1">
+                                            {/* Category */}
+                                            <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
+                                                {project.category}
+                                            </span>
+                                            {/* Title */}
+                                            <h3 className="text-lg md:text-xl font-extrabold text-slate-800 leading-snug group-hover:text-primary transition-colors duration-300">
+                                                {project.title}
+                                            </h3>
+                                        </div>
+                                        
+                                        {/* Circular Action Button */}
+                                        <a
+                                            href={project.link}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-11 h-11 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:text-white hover:bg-primary hover:border-primary group-hover:shadow-md transition-all duration-300 shrink-0"
+                                        >
+                                            <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform duration-300" />
+                                        </a>
                                     </div>
-                                    
-                                    {/* Circular Action Button */}
-                                    <a
-                                        href={project.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="w-11 h-11 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 hover:text-white hover:bg-primary hover:border-primary group-hover:shadow-md transition-all duration-300 shrink-0"
-                                    >
-                                        <ArrowUpRight size={18} className="group-hover:rotate-45 transition-transform duration-300" />
-                                    </a>
+
+                                    {/* Project Description Summary */}
+                                    <div className="mt-4 border-t border-slate-50 pt-4">
+                                        <p className={`text-slate-500 text-xs font-medium leading-relaxed transition-all duration-350 ${
+                                            expanded[index] ? "" : "line-clamp-2"
+                                        }`}>
+                                            {project.description}
+                                        </p>
+                                    </div>
                                 </div>
 
-                                {/* Project Description Summary & Github Quick Link */}
-                                <div className="mt-4 pt-4 border-t border-slate-50 flex items-center justify-between text-xs">
-                                    <p className="text-slate-400 font-medium line-clamp-2 pr-4 leading-relaxed">
-                                        {project.description}
-                                    </p>
-                                    
+                                {/* Toggle Action & GitHub Link */}
+                                <div className="mt-4 pt-3 border-t border-slate-50 flex items-center justify-between">
+                                    <button
+                                        onClick={() => toggleExpand(index)}
+                                        className="text-primary hover:text-primary-hover text-[11px] font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                                    >
+                                        {expanded[index] ? "Read Less" : "Read More"}
+                                    </button>
+
                                     {project.github && (
                                         <a
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="inline-flex items-center gap-1 font-bold text-slate-400 hover:text-primary shrink-0 transition-colors"
+                                            className="inline-flex items-center gap-1.5 font-bold text-slate-400 hover:text-primary transition-colors text-xs"
                                             title="View Code on GitHub"
                                         >
+                                            {expanded[index] && <span className="text-[10px] uppercase tracking-wider">GitHub</span>}
                                             <Github size={16} />
                                         </a>
                                     )}
