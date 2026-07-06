@@ -57,19 +57,24 @@ export const portfolioData = {
       company: "BRANDANDBRANDZ",
       duration: "Jan 2026 – Jun 2026",
       description: "Worked on Full-Stack and SaaS applications using ReactJS, Node.js, FastAPI and PostgreSQL, building responsive UIs, backend APIs, authentication and database systems. Developed projects including a Celebration Platform, Temple Website and Lead Generation SaaS product with CRM integration, deployment and performance optimization.",
-      tech: ["ReactJS", "Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Python", "UI/UX Design"]
+      tech: ["ReactJS", "Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Python", "UI/UX Design"],
+      certificates: [{link:"https://drive.google.com/file/d/15x8C20Y741jB8eG4H27oM3XgC2kF811w/view?usp=sharing"}]
     },
     {
       role: "Full Stack Developer Mentor",
-      company: "Coding Key",
+      company: "Coding Key LLP",
       duration: "Dec 2024 - Apr 2025",
-      description: "Guided interns through project planning, code reviews and iterative feedback to improve learning outcomes."
+      description: "Guided interns through project planning, code reviews and iterative feedback to improve learning outcomes.",
+      certificates: [{link:"https://drive.google.com/file/d/15x8C20Y741jB8eG4H27oM3XgC2kF811w/view?usp=sharing"}]
+
     },
     {
       role: "Volunteer",
       company: "Smart India Hackathon (SIH) 2024",
       duration: "2024",
-      description: "Supported event logistics and coordination with participating teams and mentors for smooth national-level execution."
+      description: "Supported event logistics and coordination with participating teams and mentors for smooth national-level execution.",
+      certificates: [{link:"https://drive.google.com/file/d/15x8C20Y741jB8eG4H27oM3XgC2kF811w/view?usp=sharing"}]
+
     }
   ],
   projects: [
