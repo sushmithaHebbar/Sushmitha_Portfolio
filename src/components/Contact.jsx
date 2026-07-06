@@ -22,15 +22,15 @@ export default function Contact() {
                 <div className="flex items-center gap-2 mb-4">
                     <span className="w-2 h-2 rounded-full bg-primary inline-block" />
                     <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                        Get In Touch
+                        Let's Connect
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 pt-5 items-start">
                     
                     {/* Left Column: Info & Socials */}
                     <div className="lg:col-span-5 space-y-10">
-                        <div>
+                        {/* <div>
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight leading-[1.1] mb-6">
                                 Let's Create Something <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">
@@ -41,11 +41,11 @@ export default function Contact() {
                             <p className="text-base text-slate-450 font-semibold leading-relaxed">
                                 Have a project in mind, looking for a dedicated intern, or just want to say hello? I'd love to connect with you.
                             </p>
-                        </div>
+                        </div> */}
 
                         {/* Contact info list */}
                         <div className="space-y-6">
-                            <div className="flex items-center gap-5 group">
+                            <div className="flex items-center gap-5 group pt-14">
                                 <div className="w-12 h-12 rounded-xl bg-primary/5 border border-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 shrink-0">
                                     <Mail size={18} />
                                 </div>
@@ -89,7 +89,7 @@ export default function Contact() {
                         </div>
 
                         {/* Social Icons Row */}
-                        <div className="flex items-center gap-3 pt-6 border-t border-slate-100">
+                        <div className="flex items-center gap-3 border-t border-slate-100 pt-6">
                             <a href={portfolioData.socials.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-50 border border-slate-150 flex items-center justify-center text-slate-500 hover:text-white hover:bg-primary hover:border-primary shadow-sm transition-all duration-300">
                                 <Linkedin size={16} />
                             </a>
@@ -134,19 +134,6 @@ export default function Contact() {
                                         className="w-full bg-white border border-slate-200 px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-700 placeholder-slate-350 focus:border-primary focus:outline-none transition-colors shadow-sm"
                                     />
                                 </div>
-                            </div>
-
-                            <div className="space-y-2">
-                                <label className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
-                                    Project / Inquiry Type
-                                </label>
-                                <select className="w-full bg-white border border-slate-200 px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-700 focus:border-primary focus:outline-none transition-colors shadow-sm appearance-none">
-                                    <option>Full-Stack Web App</option>
-                                    <option>AI / Machine Learning Project</option>
-                                    <option>Internship / Job Inquiry</option>
-                                    <option>Collaboration</option>
-                                    <option>Other / Just Say Hello</option>
-                                </select>
                             </div>
 
                             <div className="space-y-2">

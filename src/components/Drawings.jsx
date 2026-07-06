@@ -15,18 +15,15 @@ export default function Drawings() {
                     <div className="flex flex-col items-center md:items-start">
                         <div className="flex items-center gap-2 mb-3">
                             <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                            <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
                                 Creativity & Art
                             </h2>
                         </div>
-                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
+                        <h2 className="text-2xl sm:text-4xl font-semibold text-slate-800 tracking-tight">
                             A Glimpse of my Sketches
                         </h2>
                     </div>
                     
-                    <div className="flex items-center gap-1.5 px-3 py-1 bg-primary/5 border border-primary/10 rounded-full text-xs font-bold text-primary tracking-wider uppercase">
-                        <Palette size={12} /> Artistic Side
-                    </div>
                 </div>
 
                 {/* Drawings Display Grid */}
