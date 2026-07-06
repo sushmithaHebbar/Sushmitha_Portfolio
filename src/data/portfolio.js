@@ -35,15 +35,15 @@ export const portfolioData = {
     },
     {
       category: "Frameworks & Libraries",
-      items: ["React", "Node.js", "TensorFlow", "Keras", "scikit-learn", "NumPy", "Pandas", "SciPy", "OpenCV"]
+      items: ["React.js", "Next.js","Node.js", "TensorFlow", "Keras", "scikit-learn", "NumPy", "Pandas", "SciPy", "OpenCV"]
     },
     {
       category: "Databases & Platforms",
-      items: ["MySQL", "MongoDB", "Firebase", "AWS"]
+      items: ["MySQL", "MongoDB", "AWS (Basics)"]
     },
     {
       category: "Tools",
-      items: ["Git", "GitHub", "VS Code", "Google Colab", "Docker", "REST APIs"]
+      items: ["Git", "GitHub", "VS Code", "Google Colab", "REST APIs, Postman"]
     },
     {
       category: "Soft Skills",
@@ -55,14 +55,14 @@ export const portfolioData = {
     {
       role: "Full Stack Developer Intern",
       company: "BRANDANDBRANDZ",
-      duration: "Jan 2026 – Present",
+      duration: "Jan 2026 – Jun 2026",
       description: "Worked on Full-Stack and SaaS applications using ReactJS, Node.js, FastAPI and PostgreSQL, building responsive UIs, backend APIs, authentication and database systems. Developed projects including a Celebration Platform, Temple Website and Lead Generation SaaS product with CRM integration, deployment and performance optimization.",
       tech: ["ReactJS", "Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Python", "UI/UX Design"]
     },
     {
-      role: "Internship Mentor",
+      role: "Full Stack Developer Mentor",
       company: "Coding Key",
-      duration: "Volunteer",
+      duration: "Dec 2024 - Apr 2025",
       description: "Guided interns through project planning, code reviews and iterative feedback to improve learning outcomes."
     },
     {

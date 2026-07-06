@@ -1,90 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Layers, Eye, Terminal, CheckCircle2, Star } from "lucide-react";
+import { CheckCircle2, Star } from "lucide-react";
 import { portfolioData } from "@/data/portfolio";
 
 export default function Skills() {
-    // 4 Capabilities tailored to Sushmitha's AIML + Full Stack expertise
-    const capabilities = [
-        {
-            title: "AI & ML Systems",
-            desc: "Developing custom predictive models, neural networks, and classification pipelines using TensorFlow and Scikit-Learn.",
-            icon: Brain,
-        },
-        {
-            title: "Full-Stack Development",
-            desc: "Crafting robust, responsive web applications with interactive React frontends and secure Node.js/Express backends.",
-            icon: Layers,
-        },
-        {
-            title: "Computer Vision",
-            desc: "Building real-time object detection, facial recognition, and image classification systems using OpenCV.",
-            icon: Eye,
-        },
-        {
-            title: "APIs & Python Automation",
-            desc: "Creating high-performance Python backends, FastAPI/Flask REST APIs, data scrapers, and pipeline scripts.",
-            icon: Terminal,
-        },
-    ];
-
     return (
         <section id="skills" className="py-20 px-6 md:py-28 md:px-[10%] bg-white relative">
             <div className="max-w-7xl mx-auto">
                 
-                {/* Services & Capabilities Header */}
-                <div className="flex items-center gap-2 mb-4">
-                    <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                    <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                        Services & Capabilities
-                    </h2>
-                </div>
-
-                {/* Capabilities Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-                    {capabilities.map((cap, idx) => {
-                        const IconComponent = cap.icon;
-                        return (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                                whileHover={{ y: -5 }}
-                                className="p-6 bg-slate-50 border border-slate-100 rounded-3xl transition-all duration-350 hover:bg-white hover:border-primary/10 hover:shadow-lg hover:shadow-primary/5 group"
-                            >
-                                {/* Icon Container */}
-                                <div className="w-12 h-12 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-350">
-                                    <IconComponent size={22} />
-                                </div>
-
-                                {/* Title */}
-                                <h3 className="text-lg font-extrabold text-slate-800 mb-3 group-hover:text-primary transition-colors">
-                                    {cap.title}
-                                </h3>
-
-                                {/* Description */}
-                                <p className="text-sm font-semibold text-slate-400 leading-relaxed">
-                                    {cap.desc}
-                                </p>
-                            </motion.div>
-                        );
-                    })}
-                </div>
-
-                {/* Separator / Subheader for Tools */}
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 pt-8 border-t border-slate-100">
+                {/* Header for Tools & Skills */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
                     <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-cyan-500 inline-block" />
-                        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                        <span className="w-2 h-2 rounded-full bg-primary inline-block" />
+                        <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
                             Tools & Skills
-                        </h3>
+                        </h2>
                     </div>
-                    <div className="flex items-center gap-1 text-[11px] font-extrabold text-primary uppercase bg-primary/5 px-3 py-1 rounded-full">
+                    {/* <div className="flex items-center gap-1 text-[11px] font-extrabold text-primary uppercase bg-primary/5 px-3 py-1 rounded-full">
                         <Star size={10} className="fill-primary" /> Core Tech Stack
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Technical Skills Grid */}
