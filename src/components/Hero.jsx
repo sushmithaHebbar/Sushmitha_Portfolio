@@ -48,13 +48,13 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative min-h-screen flex flex-col justify-center pt-24 pb-16 px-6 md:px-[10%] bg-grid-dots overflow-hidden"
+            className="relative min-h-screen flex flex-col justify-center pt-24 pb-12 px-6 md:px-[10%] bg-grid-dots overflow-hidden"
         >
             {/* Soft background glow highlights */}
             <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[450px] h-[450px] bg-cyan-400/5 rounded-full blur-[120px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
+            <div className="max-w-10xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center z-10">
                 {/* Left Side Content */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -151,25 +151,25 @@ export default function Hero() {
                 </motion.div>
             </div>
 
-            {/* Trusted/Associated Organizations Bar */}
+            {/* Trusted/Associated Organizations Bar
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="max-w-7xl mx-auto w-full mt-20 pt-8 border-t border-slate-200/60 z-10"
+                className="max-w-7xl mx-auto w-full mt-24 p-8 bg-white/70 backdrop-blur-md border border-slate-100/80 rounded-3xl shadow-sm z-10"
             >
-                <p className="text-center lg:text-left text-xs font-bold text-slate-400 tracking-widest uppercase mb-6">
+                <p className="text-center lg:text-left text-xs font-bold text-slate-450 tracking-widest uppercase mb-6">
                     Journey Milestones & Associations
                 </p>
-                <div className="flex flex-wrap justify-center lg:justify-between items-center gap-8 md:gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div className="flex flex-wrap justify-center lg:justify-between items-center gap-6 md:gap-8 opacity-80 transition-all duration-300">
                     {associations.map((assoc, idx) => (
-                        <div key={idx} className="flex items-center gap-1.5 font-black text-slate-700 text-lg md:text-xl tracking-tight">
-                            <span className="w-2.5 h-2.5 bg-primary rounded-full" />
+                        <div key={idx} className="flex items-center gap-2 font-bold text-slate-1000 text-sm md:text-base  hover:text-primary transition-colors cursor-default bg-slate-50/50 border border-slate-100/50 px-4 py-2.5 rounded-2xl">
+                            <span className="w-2 h-2 bg-primary rounded-full shrink-0" />
                             {assoc.name}
                         </div>
                     ))}
                 </div>
-            </motion.div>
+            </motion.div> */}
         </section>
     );
 }
