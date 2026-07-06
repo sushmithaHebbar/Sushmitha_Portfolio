@@ -170,9 +170,6 @@ export default function Drawings() {
                                 <h3 className="text-xl font-bold text-white mb-1">
                                     {currentDrawing.title}
                                 </h3>
-                                <p className="text-sm font-semibold text-slate-400 uppercase tracking-widest">
-                                    {currentDrawing.description || "Pencil Sketch"}
-                                </p>
                                 
                                 {/* Mobile-only swipe / pagination helper */}
                                 <div className="flex md:hidden items-center justify-center gap-6 mt-4">

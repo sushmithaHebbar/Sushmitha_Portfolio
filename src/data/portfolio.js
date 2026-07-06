@@ -167,6 +167,10 @@ export const portfolioData = {
     {
       title: "Sketch 7",
       url: "/drawing/sketch_8.jpeg",
+    },
+    {
+      title: "Crochet Hairband",
+      url: "/drawing/crochet_hairband.png",
     }
   ],
   contact: {
