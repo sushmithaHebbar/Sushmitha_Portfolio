@@ -16,7 +16,7 @@ export const portfolioData = {
     {
       degree: "10th Standard",
       institution: "Mahatma Gandhi Centenary High School",
-      percentage: "89%",
+      percentage: "88.8%",
     },
     {
       degree: "PUC (PCMC)",
@@ -81,6 +81,8 @@ export const portfolioData = {
       tech: ["Flask", "HTML", "CSS", "JavaScript", "Large Language Models (LLMs)", "Full-Stack Development"],
       github: "https://github.com/sushmithaHebbar",
       link: "https://github.com/sushmithaHebbar",
+      image: "/chatbot.png",
+      category: "AI & Chat Systems"
     },
     {
       title: "Real-time Voice Translation System",
@@ -88,6 +90,8 @@ export const portfolioData = {
       tech: ["Python", "SpeechRecognition API", "Google Translate API", "gTTS", "Flask"],
       github: "https://github.com/sushmithaHebbar",
       link: "https://github.com/sushmithaHebbar",
+      image: "/translator.png",
+      category: "Speech AI"
     },
     {
       title: "AI-Enhanced Diagnostic Tool for Youth Depression Recovery",
@@ -95,12 +99,14 @@ export const portfolioData = {
       tech: ["OpenCV", "Haar Cascade", "Pickle", "CSV", "Scikit-learn", "Pandas", "REST API", "Django", "TensorFlow", "NumPy"],
       github: "https://github.com/sushmithaHebbar",
       link: "https://github.com/sushmithaHebbar",
+      image: "/diagnostic.png",
+      category: "Computer Vision & ML"
     }
   ],
   certificates: [
     {
       title: "AI Using Python",
-      issuer: "NPTEL / Online Certification",
+      issuer: "Infosys SpringBoard",
       date: "July 2024",
       link: "https://drive.google.com/file/d/1b1Mf8T3RWM2bxjx-Lsum2-xSlN4ipEJP/view?usp=sharing"
     },
@@ -168,7 +174,7 @@ export const portfolioData = {
   drawings: [
     {
       title: "Drawing 1",
-      url: "/placeholder-drawing.jpg",
+      url: "/drawing1.png",
     }
   ],
   contact: {

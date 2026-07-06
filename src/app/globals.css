@@ -1,101 +1,115 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1f242d;
-  --color-accent: #0ef;
-  --color-accent-hover: #00d5ff;
+  --color-primary: #2b5cff;
+  --color-primary-hover: #1e4ea8;
+  --color-accent: #2b5cff;
+  --color-accent-hover: #1a4cd4;
+  --color-card-bg: rgba(255, 255, 255, 0.85);
+  --color-text-main: #0f172a;
+  --color-text-sub: #475569;
 }
 
 :root {
-  --background: #06152e;
-  --foreground: #ffffff;
+  --background: #f5f8ff;
+  --foreground: #0f172a;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-text-main);
+  background-color: var(--background);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(43, 92, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 213, 255, 0.05) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(43, 92, 255, 0.03) 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
-.multiple-text {
-  color: #0ef;
-  font-weight: 700;
+/* Custom Dotted Grid Background Pattern */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(43, 92, 255, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
 }
 
-.btn-primary {
-  @apply inline-block px-7 py-3 bg-accent text-primary rounded-lg font-semibold shadow-[0_0_10px_#0ef] transition-all duration-300 hover:bg-primary hover:text-accent hover:shadow-[0_0_20px_#0ef];
+/* Premium Card Styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
 }
 
-.social-icon {
-  @apply inline-flex justify-center items-center w-10 h-10 bg-transparent border-2 border-accent rounded-full text-xl text-accent mr-4 transition-all duration-300 hover:bg-accent hover:text-primary hover:shadow-[0_0_20px_#0ef];
+.glass-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.animate-slideTop {
-  animation: slideTop 0.5s ease forwards;
+.glass-card-hover:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(43, 92, 255, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(43, 92, 255, 0.08);
 }
 
-.animate-floatImage {
-  animation: floatImage 4s ease-in-out infinite;
+/* Glowing Accent Dots */
+.pulse-green {
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  animation: pulseGreen 2s infinite;
 }
 
-/* Animations */
-@keyframes slideRight {
+@keyframes pulseGreen {
   0% {
-    transform: translateX(-100px);
-    opacity: 0;
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
   }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideTop {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideBottom {
-  0% {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-
-  100% {
+  70% {
     transform: scale(1);
-    opacity: 1;
+    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
   }
 }
 
-@keyframes floatImage {
+/* Float Animation */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px) rotate(0deg);
   }
-
   50% {
-    transform: translateY(-24px);
+    transform: translateY(-12px) rotate(1deg);
   }
-
   100% {
-    transform: translateY(0);
+    transform: translateY(0px) rotate(0deg);
   }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Typing Cursor Blink */
+@keyframes cursorBlink {
+  0%, 100% { border-color: transparent }
+  50% { border-color: currentColor }
+}
+.cursor-blink {
+  border-right-width: 3px;
+  animation: cursorBlink 0.8s step-end infinite;
 }

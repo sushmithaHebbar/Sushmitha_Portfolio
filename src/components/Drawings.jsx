@@ -2,43 +2,74 @@
 
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { Image as ImageIcon } from "lucide-react";
+import { Palette, Eye } from "lucide-react";
+import Image from "next/image";
 
 export default function Drawings() {
     return (
-        <section id="drawings" className="py-16 px-6 md:py-24 md:px-[10%] bg-primary">
-            <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1 }}
-                className="max-w-6xl mx-auto text-center"
-            >
-                <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                    Creativity & <span className="text-accent">Drawings</span>
-                </h2>
-                <p className="text-gray-400 mb-12 text-lg">A glimpse into my artistic side.</p>
+        <section id="drawings" className="py-20 px-6 md:py-28 md:px-[10%] bg-slate-50/50 relative">
+            <div className="max-w-7xl mx-auto text-center md:text-left">
+                
+                {/* Header Section */}
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-12">
+                    <div className="flex flex-col items-center md:items-start">
+                        <div className="flex items-center gap-2 mb-3">
+                            <span className="w-2 h-2 rounded-full bg-primary inline-block" />
+                            <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                Creativity & Art
+                            </h2>
+                        </div>
+                        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-800 tracking-tight">
+                            A Glimpse of my Sketches
+                        </h2>
+                    </div>
+                    
+                    <div className="flex items-center gap-1.5 px-3 py-1 bg-primary/5 border border-primary/10 rounded-full text-xs font-bold text-primary tracking-wider uppercase">
+                        <Palette size={12} /> Artistic Side
+                    </div>
+                </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {/* Drawings Display Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center md:justify-start">
                     {portfolioData.drawings.map((drawing, index) => (
                         <motion.div
                             key={index}
-                            whileHover={{ scale: 1.05 }}
-                            className="relative aspect-square overflow-hidden rounded-3xl border-4 border-accent/10 shadow-xl group cursor-pointer"
+                            initial={{ opacity: 0, scale: 0.98 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                            className="group bg-white p-4 border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/15 transition-all duration-350 flex flex-col"
                         >
-                            <div className="absolute inset-0 bg-accent/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-10 backdrop-blur-sm">
-                                <div className="text-center">
-                                    <ImageIcon className="mx-auto mb-2 text-white" size={32} />
-                                    <p className="text-white font-bold">{drawing.title}</p>
+                            {/* Artwork Image Wrapper */}
+                            <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-100 mb-4 z-0">
+                                <Image
+                                    src={drawing.url}
+                                    alt={drawing.title}
+                                    fill
+                                    className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                                />
+                                
+                                {/* Overlay search icon */}
+                                <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                    <div className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+                                        <Eye size={20} />
+                                    </div>
                                 </div>
                             </div>
-                            {/* Using a placeholder if URL is not real yet */}
-                            <div className="w-full h-full bg-primary/80 flex items-center justify-center text-gray-600">
-                                <p>Drawing Placeholder</p>
+
+                            {/* Info */}
+                            <div className="px-2 pb-2">
+                                <h3 className="text-base font-extrabold text-slate-800 mb-1 group-hover:text-primary transition-colors">
+                                    {drawing.title}
+                                </h3>
+                                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                                    Pencil sketch landscape
+                                </p>
                             </div>
                         </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            </div>
         </section>
     );
 }
