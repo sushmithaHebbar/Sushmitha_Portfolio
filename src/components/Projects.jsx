@@ -13,7 +13,7 @@ export default function Projects() {
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-12">
                     <div className="flex items-center gap-2">
                         <span className="w-2 h-2 rounded-full bg-primary inline-block" />
-                        <h2 className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+                        <h2 className="text-xs font-bold text-slate-900 uppercase tracking-widest">
                             Featured Projects
                         </h2>
                     </div>

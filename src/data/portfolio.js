@@ -83,7 +83,8 @@ export const portfolioData = {
       description: "Developed an AI-powered Full-Stack Chatbot integrating machine learning-based intent recognition and Large Language Models (LLMs) for human-like conversations, using a Flask backend and responsive frontend with HTML, CSS and JavaScript for seamless user interaction.",
       tech: ["Flask", "HTML", "CSS", "JavaScript", "Large Language Models (LLMs)", "Full-Stack Development"],
       github: "https://github.com/sushmithaHebbar",
-      link: "https://github.com/sushmithaHebbar",
+      gitlink: "https://github.com/sushmithaHebbar",
+      link:"",
       image: "/chatbot.png",
       category: "AI & Chat Systems"
     },
