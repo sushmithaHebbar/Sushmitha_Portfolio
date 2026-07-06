@@ -24,11 +24,11 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-white border-t border-slate-100 py-12 px-6 md:px-[10%]">
-            <div className="max-w-7xl mx-auto flex flex-col gap-10">
+        <footer className="bg-white border-t border-slate-100 py-4 px-6 md:px-[10%]">
+            <div className="max-w-10xl mx-auto flex flex-col gap-4">
                 
                 {/* Main Footer Row */}
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-4 ">
                     
                     {/* Logo */}
                     <div className="flex items-center gap-2.5">
@@ -39,14 +39,14 @@ export default function Footer() {
                             <span className="text-sm font-extrabold text-slate-800 tracking-tight leading-none">
                                 SUSHMITHA HEBBAR
                             </span>
-                            <span className="text-[9px] font-bold text-slate-400 tracking-wider uppercase mt-0.5">
-                                AI & ML Specialist
+                            <span className="text-[9px] font-bold text-slate-800 tracking-wider uppercase mt-0.5">
+                                Full Stack Developer
                             </span>
                         </div>
                     </div>
 
                     {/* Navigation Menu */}
-                    <nav className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+                    <nav className="flex flex-wrap justify-center items-center gap-x-6 ">
                         {footerLinks.map((link) => (
                             <Link
                                 key={link.name}
@@ -70,12 +70,9 @@ export default function Footer() {
                 </div>
 
                 {/* Sub Footer Rights row */}
-                <div className="pt-8 border-t border-slate-100/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
-                    <p className="text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                <div className="pt-2 border-t border-slate-100/80 flex flex-col sm:flex-row justify-center items-center text-center">
+                    <p className="text-[11px] font-bold text-slate-900 uppercase tracking-widest">
                         &copy; 2026 Sushmitha Hebbar. All rights reserved.
-                    </p>
-                    <p className="text-[10px] font-bold text-slate-350 uppercase tracking-wider flex items-center gap-0.5">
-                        Designed with excellence <ArrowUpRight size={10} />
                     </p>
                 </div>
 

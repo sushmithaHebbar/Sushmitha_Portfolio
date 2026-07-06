@@ -58,7 +58,7 @@ export const portfolioData = {
       duration: "Jan 2026 – Jun 2026",
       description: "Worked on Full-Stack and SaaS applications using ReactJS, Node.js, FastAPI and PostgreSQL, building responsive UIs, backend APIs, authentication and database systems. Developed projects including a Celebration Platform, Temple Website and Lead Generation SaaS product with CRM integration, deployment and performance optimization.",
       tech: ["ReactJS", "Node.js", "Express.js", "FastAPI", "MongoDB", "MySQL", "PostgreSQL", "HTML", "CSS", "JavaScript", "Bootstrap", "Git", "Python", "UI/UX Design"],
-      certificates: [{link:"https://drive.google.com/file/d/15x8C20Y741jB8eG4H27oM3XgC2kF811w/view?usp=sharing"}]
+      certificates: [{link:"public\INTERNSHIP_Sushmitha.pdf"}]
     },
     {
       role: "Full Stack Developer Mentor",
