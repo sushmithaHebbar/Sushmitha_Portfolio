@@ -2,9 +2,7 @@ export const portfolioData = {
   name: "Sushmitha",
   title: "AI & ML Specialist | Full Stack Developer",
   description: [
-    `I'm specializing in Artificial Intelligence and Machine Learning and love working on real projects that help me learn new technologies. I enjoy full-stack development challenges because they improve my problem-solving and coding skills. My hands-on experience in AI and ML helps me understand how things work in real life. All these experiences are helping me build strong skills for a successful career in tech.`,
-    `Hello! I'm Sushmitha, an enthusiastic and dedicated student pursuing a degree in AIML engineering. My journey has ignited a profound passion for artificial intelligence and machine learning. I find joy in unraveling the complexities of these fields and applying their principles to solve real-world problems.`,
-    `In addition to my technical pursuits, I am a passionate web developer. I enjoy crafting elegant and functional websites, combining creativity with technical expertise. Beyond academia and coding, I am an explorer at heart, committed to lifelong learning and making meaningful contributions to the field of AI.`
+    "Hi, I’m Sushmitha, a Computer Science Engineering graduate specializing in AI, Machine Learning and Full-Stack Development. Passionate about solving real-world problems, I build responsive, functional web applications and explore smart AI solutions, including prompt engineering. Driven by curiosity and lifelong learning, I balance my technical pursuits with creative interests like drawing and crochet."
   ],
   socials: {
     instagram: "https://www.instagram.com/sushmitha_hebbar_579/",
@@ -12,24 +10,24 @@ export const portfolioData = {
     linkedin: "https://www.linkedin.com/in/sushmitha-579242004m/",
     gmail: "mailto:sushmitham579@gmail.com",
   },
-  education: [
-    {
-      degree: "10th Standard",
-      institution: "Mahatma Gandhi Centenary High School",
-      percentage: "88.8%",
-    },
-    {
-      degree: "PUC (PCMC)",
-      institution: "Kateel College",
-      percentage: "90%",
-    },
-    {
-      degree: "B.E in Computer Science - AIML",
-      institution: "Sahyadri College of Engineering & Management",
-      percentage: "CGPA: 9.44/10.0",
-      status: "Nov 2022 – Expected 2026",
-    }
-  ],
+  // education: [
+  //   {
+  //     degree: "10th Standard",
+  //     institution: "Mahatma Gandhi Centenary High School",
+  //     percentage: "88.8%",
+  //   },
+  //   {
+  //     degree: "PUC (PCMC)",
+  //     institution: "Kateel College",
+  //     percentage: "90%",
+  //   },
+  //   {
+  //     degree: "B.E in Computer Science - AIML",
+  //     institution: "Sahyadri College of Engineering & Management",
+  //     percentage: "CGPA: 9.44/10.0",
+  //     status: "Nov 2022 – Expected 2026",
+  //   }
+  // ],
   skills: [
     {
       category: "Languages",
