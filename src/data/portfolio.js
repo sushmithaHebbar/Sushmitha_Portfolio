@@ -65,7 +65,7 @@ export const portfolioData = {
       company: "Coding Key LLP",
       duration: "Dec 2024 - Apr 2025",
       description: "Guided interns through project planning, code reviews and iterative feedback to improve learning outcomes.",
-      certificates: [{link:"https://drive.google.com/file/d/15x8C20Y741jB8eG4H27oM3XgC2kF811w/view?usp=sharing"}]
+      certificates: [{link:"public/fullstackdevelopmentor.png"}]
 
     },
     {
