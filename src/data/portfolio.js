@@ -174,9 +174,8 @@ export const portfolioData = {
     }
   ],
   contact: {
-    address: "Mangaluru, Karnataka - 575414",
+    address: "Near Mahadeva Sidhivinaya Temple, Maravoor village, Kenjar Post, Via Bajpe, Mangaluru, Karnataka - 5754142",
     phone: "+91 8880911756",
     email: "sushmitham579@gmail.com",
   },
-  quotes: "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt"
 };

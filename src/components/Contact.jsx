@@ -16,7 +16,7 @@ export default function Contact() {
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[110px] pointer-events-none" />
             <div className="absolute top-0 left-0 w-80 h-80 bg-cyan-400/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto z-10 relative">
+            <div className="max-w-10xl mx-auto z-10 relative">
                 
                 {/* Section Tag */}
                 <div className="flex items-center gap-2 mb-4">
@@ -81,7 +81,7 @@ export default function Contact() {
                                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">
                                         Location
                                     </span>
-                                    <span className="text-sm sm:text-base font-extrabold text-slate-700 block leading-snug">
+                                    <span className="text-sm sm:text-base font-bold text-slate-700 block leading-snug">
                                         {portfolioData.contact.address}
                                     </span>
                                 </div>

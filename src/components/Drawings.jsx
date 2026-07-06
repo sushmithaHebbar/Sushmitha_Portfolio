@@ -3,11 +3,12 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { Palette, Eye, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { Palette, Eye, X, ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Drawings() {
     const [selectedIndex, setSelectedIndex] = useState(null);
+    const [isGridView, setIsGridView] = useState(false);
 
     const handlePrev = useCallback(() => {
         if (selectedIndex !== null) {
@@ -56,51 +57,100 @@ export default function Drawings() {
                             A Glimpse of my Sketches
                         </h2>
                     </div>
+                    
+                    <button
+                        onClick={() => setIsGridView(!isGridView)}
+                        className="inline-flex items-center gap-1.5 text-sm font-bold text-primary hover:text-primary-hover group transition-colors cursor-pointer bg-white/60 hover:bg-white border border-slate-100 hover:border-primary/20 px-4 py-2 rounded-2xl shadow-sm hover:shadow transition-all duration-300"
+                    >
+                        {isGridView ? "View Marquee Scrolling" : "View All Sketches"}
+                        <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </button>
                 </div>
 
-                {/* Infinite Horizontal Marquee Scroll */}
-                <div className="marquee-container marquee-mask py-4">
-                    <div className="marquee-track">
-                        {[...portfolioData.drawings, ...portfolioData.drawings].map((drawing, index) => {
-                            const originalIndex = index % portfolioData.drawings.length;
-                            return (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: (index % 6) * 0.05 }}
-                                    onClick={() => setSelectedIndex(originalIndex)}
-                                    className="group bg-white p-4 border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/15 transition-all duration-350 flex flex-col cursor-pointer w-[280px] sm:w-[320px] flex-shrink-0"
-                                >
-                                    {/* Artwork Image Wrapper */}
-                                    <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-100 mb-4 z-0">
-                                        <Image
-                                            src={drawing.url}
-                                            alt={drawing.title}
-                                            fill
-                                            className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                                        />
-                                        
-                                        {/* Overlay search icon */}
-                                        <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                                            <div className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
-                                                <Eye size={20} />
-                                            </div>
+                {isGridView ? (
+                    /* Responsive Grid Layout */
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center md:justify-start">
+                        {portfolioData.drawings.map((drawing, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, scale: 0.98 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: (index % 6) * 0.05 }}
+                                onClick={() => setSelectedIndex(index)}
+                                className="group bg-white p-4 border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/15 transition-all duration-350 flex flex-col cursor-pointer"
+                            >
+                                {/* Artwork Image Wrapper */}
+                                <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-100 mb-4 z-0">
+                                    <Image
+                                        src={drawing.url}
+                                        alt={drawing.title}
+                                        fill
+                                        className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                                    />
+                                    
+                                    {/* Overlay search icon */}
+                                    <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                        <div className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+                                            <Eye size={20} />
                                         </div>
                                     </div>
+                                </div>
 
-                                    {/* Info */}
-                                    <div className="px-2 pb-2">
-                                        <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-primary text-center transition-colors">
-                                            {drawing.title}
-                                        </h3>
-                                    </div>
-                                </motion.div>
-                            );
-                        })}
+                                {/* Info */}
+                                <div className="px-2 pb-2">
+                                    <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-primary text-center transition-colors">
+                                        {drawing.title}
+                                    </h3>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
-                </div>
+                ) : (
+                    /* Infinite Horizontal Marquee Scroll */
+                    <div className="marquee-container marquee-mask py-4">
+                        <div className="marquee-track">
+                            {[...portfolioData.drawings, ...portfolioData.drawings].map((drawing, index) => {
+                                const originalIndex = index % portfolioData.drawings.length;
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 10 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: (index % 6) * 0.05 }}
+                                        onClick={() => setSelectedIndex(originalIndex)}
+                                        className="group bg-white p-4 border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg hover:border-primary/15 transition-all duration-350 flex flex-col cursor-pointer w-[280px] sm:w-[320px] flex-shrink-0"
+                                    >
+                                        {/* Artwork Image Wrapper */}
+                                        <div className="relative aspect-square overflow-hidden rounded-2xl bg-slate-100 mb-4 z-0">
+                                            <Image
+                                                src={drawing.url}
+                                                alt={drawing.title}
+                                                fill
+                                                className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                                            />
+                                            
+                                            {/* Overlay search icon */}
+                                            <div className="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
+                                                <div className="w-12 h-12 rounded-full bg-white text-primary flex items-center justify-center shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
+                                                    <Eye size={20} />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* Info */}
+                                        <div className="px-2 pb-2">
+                                            <h3 className="text-base font-bold text-slate-900 mb-1 group-hover:text-primary text-center transition-colors">
+                                                {drawing.title}
+                                            </h3>
+                                        </div>
+                                    </motion.div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Lightbox / Modal */}

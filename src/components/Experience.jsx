@@ -18,7 +18,7 @@ export default function Experience() {
 
     return (
         <section id="experience" className="py-20 px-6 md:py-28 md:px-[10%] bg-slate-50/50 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-10xl mx-auto">
                 
                 {/* Header Section */}
                 <div className="flex items-center gap-2 mb-16">
